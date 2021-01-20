@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">قدم شمار</string>
+    <string name="newtask">newtask</string>
+    <string name="ok">newtask</string>
+    <string name="close">newtask</string>
+
+
+    <string name="hint_word">Word...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="first_fragment_label">I am the first fragment</string>
+    <string name="title_activity_main_slider">MainSlider</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="second_fragment_label">I am the Second fragment</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">فهمیدم باشه</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_main_appintro">MainAppintro</string>
+    <string name="Progressbar">  این داریره نمودار پیشرفت است که تعداد قدم های پیمایش شده را نشان می دهد </string>
+    <string name="PlaySound">  این آیکون برای قطع و پخش موسیقی است </string>
+    <string name="btnStart">دکمه شروع شمردن قدم ها</string>
+    <string name="btnDetails">دکمه های جزئیات</string>
+    <string name="btnStartProject"> برای تعیین تعداد قد مای که می خواهی برداری از این دکمه استفاده کن!</string>
+    <string name="relative">تاریچه ، برای حذف هر کدام  از تاریخ ها چند  ثانیه انشگتان را روی تاریخ مورد نظر نګهدارید تا بطور اتوماتیک حذف شود</string>
+
+
+</resources>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_nested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
+
+
+            <ImageView
+                android:id="@+id/volume_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:src="@drawable/ic_volume_off_18px"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/circularProgressbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+
+                android:id="@+id/volume_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:src="@drawable/ic_volume_up_24px"
+                app:layout_constraintBottom_toTopOf="@id/circularProgressbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Chronometer
+                android:id="@+id/simpleChronometer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/volume_up"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="10dp" />
+
+
+            <TextView
+                android:id="@+id/today_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="امروز"
+                android:textColor="@color/colorBlue"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@id/circularProgressbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ProgressBar
+                android:id="@+id/circularProgressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="280dp"
+                android:layout_height="270dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circle_shape"
+                android:indeterminate="false"
+                android:max="1000"
+                android:progress="65"
+
+                android:progressDrawable="@drawable/circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/today_text"
+
+                />
+
+            <TextView
+
+                android:id="@+id/goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="@font/persian_font"
+
+                android:text="هدف: "
+                android:textColor="@color/colorDarkBlue"
+                app:layout_constraintBottom_toTopOf="@id/space3"
+                app:layout_constraintEnd_toEndOf="@id/tv"
+                app:layout_constraintStart_toStartOf="@id/tv" />
+
+
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:layout_constraintTop_toBottomOf="@id/goal"
+
+                />
+
+            <EditText
+                android:id="@+id/goaledit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/persian_font"
+
+                android:inputType="none"
+
+
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorDarkBlue"
+                android:textColorHint="@color/colorDarkBlue"
+                app:layout_constraintBottom_toTopOf="@id/tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/space3"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/persian_font"
+                android:gravity="center"
+                android:paddingBottom="25dp"
+                android:text="25"
+                android:textColor="@color/colorDarkBlue"
+
+                android:textSize="35sp"
+                app:layout_constraintBottom_toBottomOf="@+id/circularProgressbar"
+                app:layout_constraintLeft_toLeftOf="@id/circularProgressbar"
+                app:layout_constraintRight_toRightOf="@id/circularProgressbar"
+                app:layout_constraintTop_toTopOf="@+id/circularProgressbar"
+                app:layout_constraintVertical_bias="0.55" />
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_shape"
+                android:text="شروع"
+                android:textColor="@color/DarkRed"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv"
+
+
+                />
+
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_shape"
+                android:text="توقف"
+                android:textColor="@color/DarkRed"
+                android:textSize="9sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv" />
+
+            <Space
+                android:id="@+id/spacer"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                app:layout_constraintTop_toBottomOf="@id/circularProgressbar" />
+
+
+            <Button
+                android:id="@+id/location"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/circle_shape"
+                app:layout_constraintBaseline_toBaselineOf="@+id/kcal"
+                app:layout_constraintEnd_toStartOf="@+id/kcal"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/kcal"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/circle_shape"
+                app:layout_constraintBaseline_toBaselineOf="@+id/kil"
+                app:layout_constraintEnd_toStartOf="@+id/kil"
+                app:layout_constraintStart_toEndOf="@+id/location" />
+
+            <Button
+                android:id="@+id/kil"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/circle_shape"
+                app:layout_constraintBaseline_toBaselineOf="@+id/hm"
+                app:layout_constraintEnd_toStartOf="@+id/hm"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/kcal" />
+
+            <Button
+
+                android:id="@+id/hm"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/circle_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/kil"
+                app:layout_constraintTop_toBottomOf="@id/spacer" />
+
+            <TextView
+                android:id="@+id/km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="0.00"
+                app:layout_constraintEnd_toEndOf="@id/location"
+                app:layout_constraintStart_toStartOf="@id/location"
+                app:layout_constraintTop_toBottomOf="@id/location" />
+
+
+            <TextView
+                android:id="@+id/counterkal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="0.00"
+                app:layout_constraintEnd_toEndOf="@id/kcal"
+                app:layout_constraintStart_toStartOf="@id/kcal"
+                app:layout_constraintTop_toBottomOf="@id/kcal" />
+
+
+            <TextView
+                android:id="@+id/counterkil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="0.00"
+                app:layout_constraintEnd_toEndOf="@id/kil"
+                app:layout_constraintStart_toStartOf="@id/kil"
+                app:layout_constraintTop_toBottomOf="@id/kil" />
+
+
+            <TextView
+                android:id="@+id/counterhm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="0.00"
+                app:layout_constraintEnd_toEndOf="@id/hm"
+                app:layout_constraintStart_toStartOf="@id/hm"
+                app:layout_constraintTop_toBottomOf="@id/hm" />
+
+
+            <Button
+                android:id="@+id/graybutton"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/km" />
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="85dp"
+                android:text="تاریخچه"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/graybutton" />
+
+            <TextView
+                android:id="@+id/weektitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="14dp"
+                android:text="این هفته"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/history"
+                android:visibility="gone"
+                 />
+
+            <TextView
+                android:id="@+id/d0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/choosed_day"
+                android:paddingBottom="5dp"
+                android:text="ج"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+
+
+                app:layout_constraintEnd_toStartOf="@+id/d1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weektitle"
+                android:visibility="gone"
+                />
+
+
+            <TextView
+                android:id="@+id/d1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="پ"
+                app:layout_constraintEnd_toStartOf="@+id/d2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/d0"
+                app:layout_constraintTop_toBottomOf="@+id/weektitle"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/d2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="چ"
+
+                app:layout_constraintEnd_toStartOf="@+id/d3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/d1"
+                app:layout_constraintTop_toBottomOf="@+id/weektitle"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/d3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="س "
+
+                app:layout_constraintEnd_toStartOf="@+id/d4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/d2"
+                app:layout_constraintTop_toBottomOf="@+id/weektitle"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/d4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="د"
+
+                app:layout_constraintEnd_toStartOf="@+id/d5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/d3"
+                app:layout_constraintTop_toBottomOf="@+id/weektitle"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/d5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ی"
+
+                app:layout_constraintEnd_toStartOf="@+id/d6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/d4"
+                app:layout_constraintTop_toBottomOf="@+id/weektitle"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/d6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ش"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/d5"
+                app:layout_constraintTop_toBottomOf="@+id/weektitle"
+                android:visibility="gone"
+                />
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/spacer2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+
+                android:layout_marginVertical="1dp"
+                app:layout_constraintTop_toBottomOf="@id/d6" />
+
+
+            <ImageView
+                android:id="@+id/bluerightarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                app:layout_constraintEnd_toStartOf="@id/textView"
+
+                app:layout_constraintTop_toBottomOf="@+id/spacer2"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:text="جداول بیشتر"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spacer2"
+                android:visibility="gone"
+
+
+                />
+
+
+            <Button
+                android:id="@+id/graybutton2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/colorGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/DarkRed"
+                android:contentDescription="@string/newtask"
+                android:paddingTop="10dp"
+                android:scaleType="center"
+                android:src="@drawable/plus"
+                app:fabCustomSize="40dp"
+
+                app:layout_constraintBottom_toTopOf="@id/graybutton"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!--Relative Layout-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

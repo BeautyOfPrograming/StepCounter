@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+
+    android:padding="5dp">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:background="@color/colorDarkgray"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintWidth_default="percent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintHeight_percent="0.6"
+         app:layout_constraintWidth_percent="0.85"
+
+         >
+
+
+
+         <TextView
+             android:id="@+id/txtclose0"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_gravity="end"
+             android:background="@drawable/close"
+             android:gravity="center"
+             android:text="X"
+             android:textColor="@color/colorWhite"
+             android:textStyle="bold"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <!--    <TextView-->
+         <!--        android:layout_width="wrap_content"-->
+         <!--        android:layout_height="wrap_content"-->
+         <!--        android:text="تعداد قدم های مد نظر   "-->
+         <!--        android:textAlignment="center"-->
+         <!--        app:layout_constraintBottom_toTopOf="@+id/custom_ed"-->
+         <!--        app:layout_constraintEnd_toEndOf="parent"-->
+         <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+         <!--    <EditText-->
+         <!--        android:id="@+id/custom_ed"-->
+         <!--        android:layout_width="wrap_content"-->
+         <!--        android:layout_height="wrap_content"-->
+         <!--        android:background="@null"-->
+         <!--        android:hint="0"-->
+         <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+         <!--        app:layout_constraintEnd_toEndOf="parent"-->
+         <!--        app:layout_constraintStart_toStartOf="parent"-->
+         <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+         <Button android:id="@+id/ok0"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="20dp"
+             android:background="@drawable/setp_ok_background_button"
+             android:text="باشه"
+             android:textColor="@color/colorWhite"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent" />
+
+
+
+         <TextView
+             android:id="@+id/textView3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:text="   "
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent"
+             android:textAppearance="?android:attr/textAppearanceSmall" />
+
+         <!--    <NumberPicker-->
+         <!--        android:id="@+id/np"-->
+         <!--        android:layout_width="wrap_content"-->
+         <!--        android:layout_height="wrap_content"-->
+         <!--        android:layout_below="@+id/expmin"-->
+         <!--        android:layout_toLeftOf="@+id/textView3"-->
+         <!--        android:background="@color/colorWhite"-->
+
+         <!--        app:layout_constraintTop_toTopOf="parent"-->
+         <!--        app:layout_constraintEnd_toEndOf="parent"-->
+         <!--        app:layout_constraintStart_toStartOf="@id/numberPicker1"-->
+         <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+         <!--        />-->
+
+         <TextView
+             android:id="@+id/expmin"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/textView3"
+
+             android:text="Exp.Min"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textColor="#3276b1"
+             android:textStyle="bold|italic" />
+
+         <TextView
+             android:id="@+id/textView2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/textView3"
+
+             android:layout_toRightOf="@+id/textView3"
+             android:gravity="right"
+             android:text="تعداد قدم ها"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textColor="#3276b1"
+             android:textStyle="bold|italic"
+
+
+             />
+
+         <Button
+             android:id="@+id/button"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+
+
+             android:text="  OK  "
+             android:textColor="#3276b1" />
+
+         <NumberPicker
+             android:id="@+id/numberPicker01"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/colorWhite"
+
+
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent"
+
+             />
+
+         <!--    <NumberPicker-->
+         <!--        android:id="@+id/numberPicker0"-->
+         <!--        android:layout_width="wrap_content"-->
+         <!--        android:layout_height="wrap_content"-->
+         <!--        android:layout_above="@+id/button"-->
+         <!--        android:layout_toRightOf="@+id/button"-->
+         <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+         <!--        app:layout_constraintEnd_toStartOf="@+id/numberPicker1"-->
+         <!--        app:layout_constraintTop_toTopOf="parent"-->
+         <!--         />-->
+
+
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

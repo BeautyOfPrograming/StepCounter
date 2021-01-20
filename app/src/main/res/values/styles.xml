@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/colorBlack</item>
+
+
+
+    </style>
+
+    <style name="circle_down">
+
+        <item name="android:gravity">center</item>
+        <item name="android:shape">oval</item>
+        <item name="android:height">25dp</item>
+        <item name="android:width">25dp</item>
+        <item name="android:drawable">@drawable/plus</item>
+
+
+    </style>
+
+
+    <style name="custom_bottom_app_bar" parent="@style/Widget.MaterialComponents.BottomAppBar">
+
+        <item name="android:actionOverflowButtonStyle">@style/MyCustomTheme</item>
+        <item name="android:tint">@color/colorBlack</item>
+
+
+    </style>
+
+
+    <style name="MyCustomTheme">
+        <item name="android:src">@drawable/ic_bar_chart_24px</item>
+
+    </style>
+
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="Theme.Transparent.AppTheme.picker" parent="Theme.AppCompat.Light.NoActionBar">
+
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+
+
+    </style>
+
+    <style name="primaryActionBar" parent="Theme.AppCompat.Light">
+
+
+        <item name="colorAccent">@color/Green</item>
+
+
+    </style>
+
+
+    <!-- The default font for RecyclerView items is too small.
+The margin is a simple delimiter between the words. -->
+    <style name="word_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:background">@android:color/holo_orange_light</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
