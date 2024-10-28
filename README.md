@@ -1,5 +1,5 @@
 # StepCounter
-Hi everyone, I am glad to share this repository with you, hope you all like it and improve it.
+Hi everyone, I am glad to share this repository with you, hope you all like it and leave your comments on it.
 
 I put some photos of my app hope you like it.
 
